@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Ace Heat Tracker</title>
+  <script defer src="tracker.js"></script>
+  <style>
+    body { font-family: sans-serif; max-width: 480px; margin: auto; padding: 1rem; }
+    button { margin: 0.25rem; padding: 0.5rem 1rem; }
+    .hot { color: green; } .cold { color: red; } .neutral { color: orange; }
+    .history { max-height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 0.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Super Ace Heat Tracker</h1>
+  <button onclick="addRound('win')">+ Win</button>
+  <button onclick="addRound('loss')">+ Loss</button>
+  <p>Total Rounds: <span id="total">0</span></p>
+  <p>Heat Level: <span id="heat" class="neutral">NEUTRAL</span></p>
+  <p id="alert"></p>
+  <div class="history" id="history"></div>
+</body>
+</html>
